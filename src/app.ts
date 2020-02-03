@@ -2,14 +2,17 @@
 var express = require('express');
 import * as bodyParser from "body-parser";
 import { UserRoutes } from "./routes/userRoutes";
+import { MoodRoutes } from "./routes/moodRoutes";
 
 class App {
     public app = express();
     public userRoutes: UserRoutes = new UserRoutes();
+    public moodRoutes: MoodRoutes = new MoodRoutes();
 
     constructor() {
         this.config();   
         this.userRoutes.routes(this.app);          
+        this.moodRoutes.routes(this.app);
     }
 
     private config(): void{
