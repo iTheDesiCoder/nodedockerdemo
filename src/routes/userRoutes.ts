@@ -7,7 +7,7 @@ export class UserRoutes {
     public routes(app:any): void {          
         
         app.route('/user/')
-        .post(this.userController.addNewContact)
+        .post(this.userController.addNewUser)
         
         app.route('/user/:userID')
         .get((req: Request, res: Response) => {            
