@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: nodedockerdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodedockerdemo 
+    spec:
+      containers:
+        - name: nodedockerdemo 
+          image: nodedockerdemo.azurecr.io/nodedockerdemo
+          ports:
+          - containerPort: 3000
