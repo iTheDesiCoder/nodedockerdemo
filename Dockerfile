@@ -1,5 +1,5 @@
 FROM node:10-alpine
-WORKDIR /dist/
+WORKDIR /dist
 ADD ./package.json .
 RUN npm install
 COPY . .
