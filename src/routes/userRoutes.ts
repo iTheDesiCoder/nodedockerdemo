@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {UserController} from "../controllers/usercontroller";
+import {UserController} from "../controllers/userController";
 
 export class UserRoutes {    
     public userController :UserController = new UserController();
