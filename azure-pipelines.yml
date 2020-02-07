@@ -1,4 +1,9 @@
 # Deploy to Azure Kubernetes Service
+- task: AzureWebAppContainer@1
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise(1)(59e970d9-79d8-44a8-b8f6-6a1041106b2b)'
+    appName: 'nodedockerdemo'
+    containers: 'nodedockerdemo.azurecr.io/nodedockerdemo:latest'
 # Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
